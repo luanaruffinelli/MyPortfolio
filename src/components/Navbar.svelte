@@ -8,7 +8,7 @@
     </div>
 
     <!--menú -->
-    <ul class="flex items-center gap-8 text-gray-600 font-medium">
+    <ul class="flex items-center gap-8 text-gray-600 font-medium"> 
       
       <li>
         <a href="/" class="relative text-purple-500 transition">
