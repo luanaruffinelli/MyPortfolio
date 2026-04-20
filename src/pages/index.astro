@@ -1,7 +1,166 @@
 ---
+import Hero from "../components/Hero.svelte";
 import Layout from "./layouts/layout.astro";
 ---
 
 <Layout>
-	<h1>Hola! Soy Luana Naomi Ruffinelli</h1>
+  <!-- HERO -->
+	<section class="w-full flex justify-center mt-10 px-4">
+    	<div class="w-full max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+
+      		<!-- Texto -->
+      		<div class="space-y-6 animate-fade-up">
+        		<h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white">
+          			Hola, soy <span class="text-purple-500">Lua Ruffinelli</span> :)
+        		</h1>
+
+        		<p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+          			Estudiante de Tecnicatura Universitaria en Programación, fanática de la tecnología, el diseño y la creación de soluciones digitales. 
+          			Me gusta aprender, crear y enfrentar nuevos desafíos.
+        		</p>
+
+        		<!-- Botones -->
+        		<div class="flex gap-4 flex-wrap">
+          			<a href="/sobre-mi"
+            			class="btn-primary px-6 py-3 bg-purple-500 dark:bg-purple-900 text-white rounded-xl shadow-md hover:bg-purple-600 dark:hover:bg-purple-700 transition hover:scale-105">
+            			Sobre mí
+          			</a>
+
+					<a href="/experiencia" 
+						class="btn-secondary px-6 py-3 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-xl shadow-md hover:scale-105 transition">
+  						Ver experiencia
+					</a>
+        		</div>
+      		</div>
+
+      		<!-- Imagen -->
+      		<div class="flex justify-center animate-fade-up delay-200">
+        		<div class="relative group w-64 h-64 md:w-80 md:h-80 rounded-full bg-purple-200 dark:bg-purple-900/30 flex items-center justify-center shadow-lg">
+          			<span class="text-gray-500">Mi foto :)</span>
+        		</div>
+      		</div>
+
+	  		<div class="absolute inset-0 rounded-full bg-purple-400 blur-3x1 opacity-20 group-hover:opacity-40 transition pointer-events-none"></div>
+
+    	</div>
+	</section>
+
+  	<!-- SECCIÓN HABILIDADES -->
+  	<section class="w-full flex justify-center mt-20 px-4">
+    	<div class="w-full max-w-6xl">
+
+      		<h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-8">
+        		Tecnologías que uso
+      		</h2>
+
+      		<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+				<!--Web -->
+				<div class="card text-left animate-fade-up">
+		  			<h3 class="font-semibold text-gray-800 dark:text-white">Desarrollo web</h3>
+		  			<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">HTML</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">CSS</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">JavaScript</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">React</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">Astro</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">Tailwind</span>
+		  			</div>
+      			</div>
+
+				<!--Base de datos -->
+				<div class="card text-left animate-fade-up">
+		  			<h3 class="font-semibold text-gray-800 dark:text-white">Base de datos</h3>
+		  			<div class="flex flex-wrap gap-3">
+							<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">PostgreSQL</span>
+		  			</div>
+      			</div>
+
+				<!--APIs  Testing -->
+				<div class="card text-left animate-fade-up">
+		  			<h3 class="font-semibold text-gray-800 dark:text-white">APIs y Testing</h3>
+		  			<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">Postman</span>
+		  			</div>
+      			</div>
+
+				<!--Herramientas -->
+				<div class="card text-left animate-fade-up">
+		  			<h3 class="font-semibold text-gray-800 dark:text-white">Herramientas</h3>
+		  			<div class="flex flex-wrap gap-3">
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">Git</span>
+						<span class="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900/30 
+							text-purple-600 dark:text-purple-300 rounded-lg 
+							hover:scale-105 transition">GitHub</span>
+		  			</div>
+      			</div>
+		  	</div>
+      	</div>
+	</section>
+
+  	<!-- SECCIÓN PROYECTOS -->
+  	<section class="w-full flex justify-center mt-20 px-4">
+    	<div class="w-full max-w-6xl">
+
+      		<h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-8">
+        		Proyectos destacados
+      		</h2>
+
+      		<div class="grid md:grid-cols-3 gap-6">
+
+        		{["Proyecto 1", "Proyecto 2", "Proyecto 3"].map((project, i) => (
+					<div class={`card group animate-fade-up delay-${i * 150}`}>
+						<h3 class="text-mauve-950 dark:text-gray-300 font-semibold">{project}</h3>
+						<p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
+			  				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum excepturi dolorum in rerum, aperiam dolorem vitae voluptatum, earum reiciendis explicabo dicta eligendi. Non illo obcaecati vero cumque explicabo provident quidem?			
+						</p>
+
+						<div class="mt-4 text-purple-500 opacity-0 group-hover:opacity-100 transition">
+              				Ver más →
+            			</div>
+
+		  			</div>
+				))}
+      		</div>
+    	</div>
+  	</section>
+
+  	<!-- CTA FINAL -->
+  	<section class="w-full flex justify-center mt-20 mb-10 px-4">
+    	<div class="w-full max-w-6xl bg-purple-500 dark:bg-purple-950 text-white rounded-2xl p-10 text-center shadow-md">
+
+      		<h2 class="text-2xl font-semibold mb-4">
+        		¿Querés trabajar conmigo?
+      		</h2>
+
+      		<p class="mb-6 opacity-90">
+        		Estoy abierta a nuevas oportunidades y proyectos.
+      		</p>
+
+      		<a href="/contacto"
+        		class="px-6 py-3 bg-white dark:bg-purple-300 text-purple-600 dark:text-purple-900 rounded-xl hover:scale-105 transition">
+        		Contactame
+      		</a>
+
+    	</div>
+  	</section>
+
 </Layout>

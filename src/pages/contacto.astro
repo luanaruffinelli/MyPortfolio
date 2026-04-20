@@ -1,0 +1,118 @@
+---
+import Layout from "./layouts/layout.astro";
+---
+
+<Layout>
+    <section class="w-full min-h-[80vh] flex items-center justify-center px-4">
+        <div>
+            <div class="w-full max-w-4xl text-center space-y-4 reveal">
+                <h1 class="text-4xl font-bold text-gray-900 dark:text-white">¡Hablemos!</h1>
+                <p class="text-gray-600 dark:text-gray-300">
+                    Podés comunicarte conmigo a través de los siguientes medios:
+                </p>
+            </div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/5493491405296?text=Hola%20Lua,%20vi%20tu%20portfolio%20y%20quiero%20contactarte"
+                    target="_blank"
+                    class="p-6 bg-white dark:bg-gray-800 dark:text-white rounded-2xl shadow-md 
+                            flex items-center justify-between
+                            transition duration-300 hover:scale-105 hover:shadow-xl reveal delay-100">
+                    <div>
+                        <h3 class="font-semibold text-lg">WhatsApp</h3>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Respuesta rápida para consultas.
+                        </p>
+                    </div>
+                    <span class="text-2xl">💬</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:luanaruffinelli@outlook.com?subject=Contacto%20desde%20portfolio&body=Hola%20Lua,%20vi%20tu%20portfolio%20y%20quiero%20contactarte"
+                    class="p-6 bg-white dark:bg-gray-800 dark:text-white rounded-2xl shadow-md 
+                            flex items-center justify-between
+                            transition duration-300 hover:scale-105 hover:shadow-xl reveal delay-200">
+                    <div>
+                        <h3 class="font-semibold text-lg">Email</h3>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Para propuestas formales.
+                        </p>
+                    </div>
+                    <span class="text-2xl">📧</span>
+                </a>
+
+                <!-- linkedIn -->
+                <a href="https://www.linkedin.com/"
+                    target="_blank"
+                    class="p-6 bg-white dark:bg-gray-800 dark:text-white rounded-2xl shadow-md 
+                            flex items-center justify-between
+                            transition duration-300 hover:scale-105 hover:shadow-xl reveal delay-300">
+                    <div>
+                        <h3 class="font-semibold text-lg">LinkedIn</h3>
+                        <p class="text-sm text-gray-600 mt-1">
+                   
+                            Conectemos profesionalmente.
+                        </p>
+                    </div>
+                    <span class="text-2xl">💼</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/luanaruffinelli"
+                    target="_blank"
+                    class="p-6 bg-white dark:bg-gray-800 dark:text-white rounded-2xl shadow-md 
+                            flex items-center justify-between
+                            transition duration-300 hover:scale-105 hover:shadow-xl reveal delay-400">
+                    <div>
+                        <h3 class="font-semibold text-lg">GitHub</h3>
+                        <p class="text-sm text-gray-600 mt-1">
+                            Ver mis proyectos.
+                        </p>
+                    </div>
+                    <span class="text-2xl">💻</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+ <!-- FORMULARIO -->
+  <!-- <section class="w-full flex justify-center mt-20 mb-10 px-4">
+    <div class="w-full max-w-3xl">
+
+        <h2 class="section-title reveal">O enviame un mensaje</h2>
+
+        <form class="card space-y-4 reveal delay-100">
+
+            <input 
+                type="text" 
+                placeholder="Tu nombre"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+
+            <input 
+                type="email" 
+                placeholder="Tu email"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+
+            <textarea 
+                placeholder="Tu mensaje"
+                rows="5"
+                class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            ></textarea>
+            
+            <button 
+                type="submit"
+                class="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition">
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </div>
+  </section> -->
+</Layout>

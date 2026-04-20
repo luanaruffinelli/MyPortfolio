@@ -1,7 +1,7 @@
 ---
 import Navbar from '../../components/Navbar.svelte';
 import Footer from '../../components/Footer.svelte';
-import ClientRouter from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import '../../styles/global.css';
 ---
 
@@ -11,12 +11,65 @@ import '../../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
+		<script>
+			const savedTheme = localStorage.getItem("theme");
+			if (savedTheme) {
+				document.documentElement.classList.toggle("dark", savedTheme === "dark");
+			} else {
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				document.documentElement.classList.toggle("dark", prefersDark);
+			}
+		</script>
 		<meta name="generator" content={Astro.generator} />
 		<title>Lua's page</title>
 	</head>
-	<body>
-		<Navbar client:load />
-		<slot />
+
+	<body class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+		
+		<ClientRouter />
+
+		<Navbar client:load pathname={Astro.url.pathname} />
+
+		<main class="min-h-screen px-4">
+			<slot />
+		</main>
         <Footer client:load />
+
+		<!-- Tema inicial -->
+		<script>
+			const savedTheme = localStorage.getItem("theme");
+
+			if (savedTheme) {
+				document.documentElement.classList.toggle("dark", savedTheme === "dark");
+			} else {
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				document.documentElement.classList.toggle("dark", prefersDark);
+			}
+		</script>
+
+		<!--scrollreveal -->
+		<script>
+			document.addEventListener("astro:page-load", () => {
+  				const elements = document.querySelectorAll(".reveal");
+
+  				elements.forEach((el) => {
+    				el.classList.remove("show");
+  				});
+
+  				const observer = new IntersectionObserver((entries) => {
+    				entries.forEach((entry) => {
+      					if (entry.isIntersecting) {
+        					entry.target.classList.add("show");
+							observer.unobserve(entry.target); 
+      					}
+    				});
+    			}, { threshold: 0.1 });
+
+  				elements.forEach((el) => observer.observe(el));
+			});
+
+		</script>
+
 	</body>
+	
 </html>

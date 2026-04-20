@@ -1,7 +1,13 @@
 {
   "name": "proyecto1",
-  "type": "module",
   "version": "0.0.1",
+  "dependencies": {
+    "@astrojs/svelte": "^8.0.5",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.7",
+    "svelte": "^5.55.4",
+    "typescript": "^5.9.3"
+  },
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,12 +17,8 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "@astrojs/svelte": "^8.0.5",
-    "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.7",
-    "svelte": "^5.55.4",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^5.9.3"
+  "type": "module",
+  "devDependencies": {
+    "tailwindcss": "^4.2.2"
   }
 }

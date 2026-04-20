@@ -1,0 +1,49 @@
+---
+import Layout from "./layouts/layout.astro";
+import ExperienceCard from "../components/ExperienceCard.svelte";
+---
+
+<Layout>
+    <section class="w-full flex justify-center px-4 mt-10">
+        <div class="w-full max-w-4xl">
+            <!-- HEADER -->
+            <div class="text-center mb-12 reveal">
+                <h1 class="text-4xl font-bold text-gray-800 dark:text-gray-200">
+                    Experiencia
+                </h1>
+                <p class="text-gray-600 dark:text-gray-300 mt-2">
+                    Mi recorrido en proyectos y formación.
+                </p>
+            </div>
+
+            <!-- TIMELINE -->
+            <div class="space-y-4">
+
+                <ExperienceCard 
+                    client:load
+                    title="Proyecto Portfolio Personal"
+                    place="Proyecto propio"
+                    date="2026"
+                    description="Desarrollo de una web personal utilizando Astro, Svelte y Tailwind. Implementación de componentes reutilizables y diseño responsivo."
+                />
+
+                <ExperienceCard 
+                    client:load
+                    title="Prácticas de Desarrollo Web"
+                    place="Formación personal"
+                    date="2024 - Actualidad"
+                    description="Aprendizaje de HTML, CSS, JavaScript y frameworks modernos. Enfoque en buenas prácticas y código limpio."
+                />
+
+            </div>
+
+        </div>
+
+        <!-- VOLVER -->
+        <!-- <div class="text-center mt-10">
+            <a href="/" class="text-purple-500 hover:underline">
+                ← Volver al inicio
+            </a>
+        </div> -->
+    </section>
+</Layout>

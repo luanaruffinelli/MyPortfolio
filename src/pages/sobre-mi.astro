@@ -1,0 +1,98 @@
+---
+import Layout from "./layouts/layout.astro";
+---
+
+<Layout>
+    <section class="w-full flex justify-center mt-10 px-4">
+        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+    
+        <!-- Texto -->
+        <div class="space-y-6 reveal">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-200">
+            Sobre mí
+            </h1>
+    
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Soy Luana Naomi Ruffinelli, estudiante universitaria y entusiasta del desarrollo web. Me interesa crear interfaces limpias, funcionales y bien estructuradas.
+            </p>
+
+            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Me gusta aprender nuevas tecnologías, mejorar mis habilidades y enfrentar nuevos desafíos que me permitan crecer tanto técnica como personalmente.
+            </p>
+        </div>
+    
+        <!-- Imagen -->
+        <div class="flex justify-center reveal delay-200">
+            <div class="flex justify-center reveal delay-200">
+                <span class="text-gray-500 dark:text-gray-400">Mi foto :)</span>
+            </div>
+        </div>
+    
+        </div>
+    </section>
+
+    <section class="w-full flex justify-center mt-20 px-4">
+        <div class="w-full max-w-5xl">
+            <h2 class="w-full max-w-5xl text-gray-800 dark:text-gray-200">Mi enfoque</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card reveal delay-100 text-left">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-200">Código limpio</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                        Me enfoco en escribir código entendible, organizado y fácil de mantener.
+                    </p>
+                </div>
+
+                <div class="card reveal delay-200 text-left">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-200">Diseño simple</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                        Prefiero interfaces claras, sin sobrecargar al usuario.
+                    </p>
+                </div>
+
+                <div class="card reveal delay-300 text-left">
+                    <h3 class="font-semibold mb-2 text-gray-900 dark:text-gray-200">Aprendizaje constante</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-300">
+                         Siempre estoy buscando mejorar y aprender nuevas herramientas.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="w-full flex justify-center mt-20 px-4">
+        <div class="w-full max-w-5xl">
+
+            <h2 class="section-title reveal text-gray-900 dark:text-gray-200">Tecnologías principales</h2>
+
+            <div class="flex flex-wrap gap-3 reveal delay-200">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Astro</span>
+                <span class="tag">Git</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full flex justify-center mt-20 mb-10 px-4">
+    <div class="w-full max-w-6xl bg-purple-500 dark:bg-purple-950 text-white rounded-2xl p-10 text-center shadow-md">
+
+      <h2 class="text-2xl font-semibold mb-4">
+        ¿Querés trabajar conmigo?
+      </h2>
+
+      <p class="mb-6 opacity-90">
+        Estoy abierta a nuevas oportunidades y proyectos.
+      </p>
+
+      <a href="/contacto"
+        class="px-6 py-3 bg-white dark:bg-purple-300 text-purple-600 dark:text-purple-900 rounded-xl hover:scale-105 transition">
+        Contactame
+      </a>
+
+    </div>
+  </section>
+</Layout>
