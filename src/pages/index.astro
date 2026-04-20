@@ -1,6 +1,7 @@
 ---
 import Hero from "../components/Hero.svelte";
 import Layout from "./layouts/layout.astro";
+import ProjectCard from "../components/ProjectCard.svelte";
 ---
 
 <Layout>
@@ -124,21 +125,28 @@ import Layout from "./layouts/layout.astro";
         		Proyectos destacados
       		</h2>
 
-      		<div class="grid md:grid-cols-3 gap-6">
+      		<div>
+        		<div class="grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] gap-6 items-stretch">
 
-        		{["Proyecto 1", "Proyecto 2", "Proyecto 3"].map((project, i) => (
-					<div class={`card group animate-fade-up delay-${i * 150}`}>
-						<h3 class="text-mauve-950 dark:text-gray-300 font-semibold">{project}</h3>
-						<p class="text-sm text-gray-600 dark:text-gray-300 mt-2">
-			  				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum excepturi dolorum in rerum, aperiam dolorem vitae voluptatum, earum reiciendis explicabo dicta eligendi. Non illo obcaecati vero cumque explicabo provident quidem?			
-						</p>
+					<ProjectCard 
+						client:load
+						title="Proyecto 1"
+						description="Lorem ipsum dolor sit amet..."
+					/>
 
-						<div class="mt-4 text-purple-500 opacity-0 group-hover:opacity-100 transition">
-              				Ver más →
-            			</div>
+					<ProjectCard 
+						client:load
+						title="Proyecto 2"
+						description="Lorem ipsum dolor sit amet..."
+					/>
 
-		  			</div>
-				))}
+					<ProjectCard 
+						client:load
+						title="Proyecto 3"
+						description="Lorem ipsum dolor sit amet..."
+					/>
+
+				</div>
       		</div>
     	</div>
   	</section>

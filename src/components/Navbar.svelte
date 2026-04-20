@@ -4,6 +4,18 @@
   let { pathname } = $props();
 
   let menuOpen = $state(false);
+  let isDark = $state(false);
+
+  function toggleTheme() {
+    isDark = !isDark;
+
+    document.documentElement.classList.toggle("dark", isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
+
+  if (typeof window !== "undefined") {
+    isDark = document.documentElement.classList.contains("dark");
+  }
 
   function toggleMenu() {
     menuOpen = !menuOpen;
@@ -20,7 +32,7 @@
 
     <!--logo-->
     <div class="text-xl font-semibold text-purple-500 gap-2">
-      Luana ✦
+      Luana ❀
     </div>
 
     <!--menú -->
@@ -67,7 +79,7 @@
     <div class="flex items-center gap-4">
       
       <!--Modo oscuro-->
-      <ThemeToggle />
+      <ThemeToggle clientload />
 
       <!--Mobile button-->
       <button
@@ -89,15 +101,27 @@
   <!--Menú móvil-->
   {#if menuOpen}
     <div class="absolute top-full right-0 mt-2 md:hidden z-50">
-       <div class="w-64 bg-white dark:bg-gray-800/70 shadow-2xl border border-gray-200 dark:border-gray-500 rounded-xl py-6 px-6 flex flex-col gap-5 animate-slide-in backdrop-blur-md">
+       <div class="w-64 bg-white/0 dark:bg-gray-800/0 shadow-2xl border border-gray-200 dark:border-gray-500 rounded-xl py-6 px-6 flex flex-col gap-5 animate-slide-in backdrop-blur-md">
         <a href="/" onclick={closeMenu} class="text-xl  text-gray-700 dark:text-gray-300 font-medium 
-         hover:text-purple-500 transition">Inicio </a>
+          {pathname === '/' 
+            ? 'text-purple-500 bg-purple-100 dark:bg-purple-900/40 px-3 py-2 rounded-lg' 
+            : 'text-gray-700 dark:text-gray-300 hover:text-purple-500 transition"'}"
+          >Inicio </a>
         <a href="/sobre-mi" onclick={closeMenu} class="text-xl  text-gray-700 dark:text-gray-300 font-medium 
-         hover:text-purple-500 transition">Sobre mí</a>
+         {pathname === '/sobre-mi' 
+            ? 'text-purple-500 bg-purple-100 dark:bg-purple-900/40 px-3 py-2 rounded-lg' 
+            : 'text-gray-700 dark:text-gray-300 hover:text-purple-500 transition"'}"
+            > Sobre mí</a>
         <a href="/experiencia" onclick={closeMenu} class="text-xl  text-gray-700 dark:text-gray-300 font-medium 
-         hover:text-purple-500 transition">Experiencia</a>
+          {pathname === '/experiencia' 
+            ? 'text-purple-500 bg-purple-100 dark:bg-purple-900/40 px-3 py-2 rounded-lg' 
+            : 'text-gray-700 dark:text-gray-300 hover:text-purple-500 transition"'}"
+          >Experiencia</a>
         <a href="/contacto" onclick={closeMenu} class="text-xl  text-gray-700 dark:text-gray-300 font-medium 
-         hover:text-purple-500 transition">Contacto</a>
+          {pathname === '/contacto' 
+            ? 'text-purple-500 bg-purple-100 dark:bg-purple-900/40 px-3 py-2 rounded-lg' 
+            : 'text-gray-700 dark:text-gray-300 hover:text-purple-500 transition"'}"
+          >Contacto</a>   
       </div>
     </div>
     
